@@ -16,4 +16,25 @@ describe('Routes', function () {
 			expect(state.url).toEqual('/settings');
 		});
 	});
+
+	describe('Settings User', function () {
+		var state;
+
+		it('should have the correct template Url', function () {
+			state = $state.get('settings.user');
+
+			expect(state.templateUrl).toEqual('views/settings/user.html');
+		});
+	});
+
+	describe('Settings Notifications', function () {
+		var state;
+
+		it('should have the correct URL', function () {
+			state = $state.get('settings.notifications');
+
+			expect(state.url).toEqual('/notifications');
+		});
+	});
+
 });
